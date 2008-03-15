@@ -1,0 +1,104 @@
+<ui version="4.0" >
+ <class>MainDlg</class>
+ <widget class="QDialog" name="MainDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>488</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>WolMan</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item rowspan="5" row="0" column="0" >
+    <widget class="QTreeWidget" name="treeMachines" >
+     <property name="alternatingRowColors" >
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated" >
+      <bool>false</bool>
+     </property>
+     <property name="uniformRowHeights" >
+      <bool>true</bool>
+     </property>
+     <property name="itemsExpandable" >
+      <bool>false</bool>
+     </property>
+     <property name="columnCount" >
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QPushButton" name="pushMachineNew" >
+     <property name="text" >
+      <string>New machine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QPushButton" name="pushMachineEdit" >
+     <property name="text" >
+      <string>Edit machine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QPushButton" name="pushMachineDelete" >
+     <property name="text" >
+      <string>Delete machine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1" >
+    <widget class="QPushButton" name="pushAbout" >
+     <property name="text" >
+      <string>About</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>treeMachines</tabstop>
+  <tabstop>pushMachineNew</tabstop>
+  <tabstop>pushMachineEdit</tabstop>
+  <tabstop>pushMachineDelete</tabstop>
+  <tabstop>pushAbout</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>treeMachines</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>pushMachineEdit</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>174</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>295</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
