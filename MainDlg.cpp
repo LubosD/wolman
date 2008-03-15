@@ -39,7 +39,8 @@ void MainDlg::about()
 {
 	QMessageBox box(this);
 	box.setText(QString::fromUtf8("<b>WolMan</b><p>Copyright © 2008 Luboš Doležel<br>"
-					   "<a href=\"http://www.dolezel.info\">http://www.dolezel.info</a>"));
+					"<a href=\"http://www.dolezel.info\">http://www.dolezel.info</a><p>"
+					"Licensed under the terms of GNU GPLv3."));
 	box.setWindowTitle("WolMan");
 	box.exec();
 }
